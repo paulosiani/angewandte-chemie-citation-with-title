@@ -139,6 +139,7 @@ This style has many limits due to csl constraints, most notably the inability to
         </else-if>
         <else>
           <group delimiter=" ">
+            <text variable="title" quotes="true" suffix=","/>
             <text variable="container-title" form="short" font-style="italic"/>
             <group delimiter=", ">
               <text macro="year-date"/>
