@@ -138,18 +138,21 @@ This style has many limits due to csl constraints, most notably the inability to
           </group>
         </else-if>
         <else>
-          <group delimiter=" ">
-            <text variable="title" quotes="true" suffix=","/>
-            <text variable="container-title" form="short" font-style="italic"/>
-            <group delimiter=", ">
-              <text macro="year-date"/>
-              <group>
-                <text variable="volume" font-style="italic"/>
-              </group>
-              <text variable="page" form="short"/>
-            </group>
-          </group>
-          <text macro="access" prefix=", "/>
+         <group delimiter=", ">
+           <text macro="author"/>
+           <text variable="title" quotes="true"/>
+           <group delimiter=" ">
+             <text variable="container-title" form="short" font-style="italic"/>
+             <group delimiter=", ">
+               <text macro="year-date"/>
+               <group>
+                 <text variable="volume" font-style="italic"/>
+               </group>
+               <text variable="page" form="short"/>
+             </group>
+           </group>
+           <text macro="access"/>
+         </group>
         </else>
       </choose>
     </layout>
